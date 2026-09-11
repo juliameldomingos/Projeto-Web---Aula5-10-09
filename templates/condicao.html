@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>{{numero}}</h1>
+    {# % retorna o resto, 5%2 retorna 1 #}
+
+    {% if numero == 0 %}
+        <p>O numero enviado é ZERO</p>
+    {% elif (numero % 2) == 0 %}
+        <p>O numero é PAR</p>
+    {% else %}
+        <p>O numero é ÌMPAR</p>
+    {% endif %}
+
+    <!-- Usamos for sempre que precisamos repetir até um condição -->
+    <br> <h1>Contando até 0</h1>
+    <ul>
+    {% for i in range (numero, -1, -1)%}
+        <li>{{i}}</li>
+    {%endfor%}
+    </ul>
+
+</body>
+</html>
